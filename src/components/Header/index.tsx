@@ -2,6 +2,7 @@ import React from 'react';
 
 import { FiPlay, FiHeart, FiXCircle } from 'react-icons/fi';
 
+import { Link } from 'react-router-dom';
 import {
   Container,
   Notifications,
@@ -25,8 +26,12 @@ const Header: React.FC = () => {
       </div>
 
       <ul>
-        <li>HOME</li>
-        <li>FAVOURITES</li>
+        <li>
+          <Link to="/">HOME</Link>
+        </li>
+        <li>
+          <Link to="/favourites">FAVOURITES</Link>
+        </li>
       </ul>
 
       <ContentNotification>

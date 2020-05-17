@@ -1,4 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const pulse = keyframes`
+	0% {
+		transform: scale(0.80);
+
+	}
+
+	70% {
+		transform: scale(2);
+
+	}
+
+	100% {
+		transform: scale(0.95);
+
+	}
+}`;
 
 interface CardProps {
   backgroundImage?: string;
@@ -47,6 +64,11 @@ export const Card = styled.div<CardProps>`
       align-items: center;
       padding: 5px;
       border-radius: 50%;
+
+      &:focus {
+        transform: scale(1);
+        animation: ${pulse} 2s;
+      }
       /* width: 60px; */
     }
   }

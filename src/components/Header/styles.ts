@@ -33,11 +33,14 @@ export const Container = styled.header`
 
     > li {
       margin-right: 50px;
-      font-size: 18px;
-      color: #626462;
-      font-weight: 200;
-      cursor: pointer;
       transform: transition 2s;
+
+      a {
+        text-decoration: none;
+        font-weight: 200;
+        color: #626462;
+        font-size: 18px;
+      }
 
       &:hover {
         color: #aa3d32;
@@ -117,6 +120,7 @@ export const FavCard = styled.li`
 
   p {
     font-size: 10px;
+    width: 100px;
   }
 
   & + li {
